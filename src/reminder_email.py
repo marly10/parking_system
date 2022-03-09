@@ -22,7 +22,7 @@ def email_file_sender():
     # Set up the email addresses and password.#Please replace below with your email address and password
     email_from = 'buildawebsite1010@gmail.com'
     password = 'npxjcjnqcxfmwnmo'
-    email_to = ['rickymarly7@gmail.com', 'tricianmckenzie@gmail.com']
+    email_to = ['rickymarly7@gmail.com']
 
 
     # Create a MIMEMultipart class, and set up the From, To, Subject fields
@@ -34,7 +34,8 @@ def email_file_sender():
 
     # Attach more (documents)
     ##############################################################
-    dirname = '/Users/rickymarly/Desktop/dockerTest/python_calendar/calendar_invite/'
+    
+    dirname = '../calendar_invite/'
     
     # giving file extension
     ext = ('ics')
