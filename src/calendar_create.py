@@ -76,14 +76,16 @@ def create_calendar(calendar_name, date):
     # Adding events to calendar
     cal.add_component(event)
     
-    folder_path = '/Users/rickymarly/Desktop/dockerTest/python_calendar'
+    
+    cwd = os.getcwd()
+    folder_path = '../python_calendar'
 
     
     #makes calendar_folder
-    if not os.path.exists(folder_path+'/calendar_invite'):
-        os.makedirs(folder_path+'/calendar_invite')
+    if not os.path.exists('../calendar_invite'):
+        os.makedirs('../calendar_invite')
 
-    directory = folder_path+"/calendar_invite"
+    directory = "../calendar_invite"
     print("ics file will be generated at ", directory)
     f = open(os.path.join(directory, calendar_name+'.ics'), 'wb')
     f.write(cal.to_ical())
