@@ -22,7 +22,7 @@ def email_file_sender():
     # Set up the email addresses and password.#Please replace below with your email address and password
     email_from = 'buildawebsite1010@gmail.com'
     password = 'npxjcjnqcxfmwnmo'
-    email_to = ['rickymarly7@gmail.com']
+    email_to = ['rickymarly7@gmail.com', 'tricianmckenzie@gmail.com']
 
 
     # Create a MIMEMultipart class, and set up the From, To, Subject fields
@@ -43,7 +43,7 @@ def email_file_sender():
     # iterating over all files
     for files in os.listdir(dirname):
         if files.endswith(ext):
-            attach_file_to_email(email_message, '../calendar_invite/'+str(files))
+            attach_file_to_email(email_message, str(files))
             print(files)  # printing file name of desired extension
         else:
             print("not there")

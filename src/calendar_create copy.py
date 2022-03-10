@@ -101,7 +101,7 @@ def create_calendar(calendar_name, date):
 
     directory = "../calendar_invite"
     print("ics file will be generated at ", directory)
-    f = open(os.path.join(directory, calendar_name+'.ics'), 'wb')
+    f = open(calendar_name+'.ics', 'wb')
     f.write(cal.to_ical())
     f.close()
 
