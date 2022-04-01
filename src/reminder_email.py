@@ -5,9 +5,11 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 import os
 
+dirname = '../calendar_invite/'
+
 def attach_file_to_email(email_message, filename):
     
-    with open(filename, "rb") as f:
+    with open(dirname+filename, "rb") as f:
         file_attachment = MIMEApplication(f.read())
     # Add header/name to the attachments    
     file_attachment.add_header(
@@ -22,7 +24,7 @@ def email_file_sender():
     # Set up the email addresses and password.#Please replace below with your email address and password
     email_from = 'buildawebsite1010@gmail.com'
     password = 'npxjcjnqcxfmwnmo'
-    email_to = ['rickymarly7@gmail.com', 'tricianmckenzie@gmail.com']
+    email_to = ['rickymarly7@gmail.com']
 
 
     # Create a MIMEMultipart class, and set up the From, To, Subject fields
@@ -34,8 +36,6 @@ def email_file_sender():
 
     # Attach more (documents)
     ##############################################################
-    
-    dirname = '../calendar_invite/'
     
     # giving file extension
     ext = ('ics')
