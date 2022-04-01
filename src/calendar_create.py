@@ -63,6 +63,8 @@ def create_calendar(calendar_name, date):
     # need to type cast the year, month and day as variables
     event = Event()
     event.add('summary', 'Street sweeping - Move Car')
+    event.add('Attendee', 'tnmckenzie@health.ucsd.edu')
+    event.add('Attendee', 'tricianmckenzie@gmail.com')
     event.add('dtstart', datetime(datetime.today().year, datetime.today().month, date, 15, 8, 0, tzinfo=pytz.utc))
     event.add('dtend', datetime(datetime.today().year, datetime.today().month, date, 15, 8, 0, tzinfo=pytz.utc))
     event.add('dtstamp', datetime(datetime.today().year, datetime.today().month, date, 0, 10, 0, tzinfo=pytz.utc))
@@ -112,7 +114,7 @@ m4 = day_selector("MONDAY4", "monday_forth")
 t4 = day_selector("TUESDAY4", "tuesday_forth")
 
 #creates 4 calendar_invites
-create_calendar("2nd_monday", m2)
-create_calendar("2nd_tuesday", t2)
-create_calendar("4th_monday", m4)
-create_calendar("4th_tuesday", t4)
+create_calendar("2nd_monday", m2+7)
+create_calendar("2nd_tuesday", t2+7)
+create_calendar("4th_monday", m4+7)
+create_calendar("4th_tuesday", t4+7)
