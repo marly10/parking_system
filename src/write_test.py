@@ -3,3 +3,7 @@ with open('readme.txt', 'a') as f:
     
     #!/usr/bin/env python3
     # chmod +x /Users/rickymarly/Desktop/dockerTest/python_calendar/src/write_test.py
+    
+    # /home/ec2-user
+    
+    # /usr/bin/python
