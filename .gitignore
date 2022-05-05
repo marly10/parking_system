@@ -131,3 +131,4 @@ dmypy.json
 .pyre/
 #other
 credentials.json
+.DS_Store
